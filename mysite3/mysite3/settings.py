@@ -23,10 +23,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '!yh-sn@9oryyq5w0@)91uypi2*lbior=pr=y1)q(o8#_-jv9j*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*',
+                'ELCwebapp1.azurewebsites.net'
+                ]
 
+CSRF_TRUSTED_ORIGINS = ['https://elcwebapp1.azurewebsites.net']
 
 # Application definition
 
