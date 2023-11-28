@@ -26,10 +26,10 @@ SECRET_KEY = '!yh-sn@9oryyq5w0@)91uypi2*lbior=pr=y1)q(o8#_-jv9j*'
 DEBUG = False
 
 ALLOWED_HOSTS = ['*',
-                'ELCwebapp1.azurewebsites.net'
+                'ELCwebapp2.azurewebsites.net'
                 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://elcwebapp1.azurewebsites.net']
+CSRF_TRUSTED_ORIGINS = ['https://elcwebapp2.azurewebsites.net']
 
 # Application definition
 
