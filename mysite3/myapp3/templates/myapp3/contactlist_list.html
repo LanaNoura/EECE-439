@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List</title>
+</head>
+<body>
+    <h2>Contact List</h2>
+    <ul>
+        {% for contactlist in contactlists %}
+            <li>
+                {{ contactlist.name }} - {{ contactlist.email }}
+                <br>
+                Date Joined: {{ contactlist.date_joined|date:"F j, Y" }}
+                <br>
+                Date Expired: {{ contactlist.date_expired|date:"F j, Y" }}
+                <br>
+                <a href="{% url 'edit_contactlist' contactlist.id %}">Edit</a>
+                <form method="post" action="{% url 'delete_contactlist' contactlist.id %}">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_contactlist' %}"><button>Create contact</button></a>
+</body>
+</html>
